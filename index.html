@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackPrix S2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* PERFECTED COLOR SCHEME */
+        
+        
+        body {
+            background: linear-gradient(135deg, #d4003b, #0d0d0d);
+            color: white;
+        }
+        
+        /* RED NAVBAR WITH BLACK/WHITE TEXT */
+        nav {
+            background: linear-gradient(135deg, #d4003b, #0d0d0d);
+
+            box-shadow: 0 2px 15px rgba(0, 7, 3, 0.815);
+        }
+        .nav-logo {
+            color: white !important;
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: #d4003b !important;
+        }
+        
+        /* MOBILE MENU */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: var(--primary-red);
+        }
+        .mobile-menu-open {
+            max-height: 500px;
+        }
+        .mobile-menu a {
+            color: white !important;
+        }
+        .mobile-menu a:hover {
+            color: #d4003b !important;
+        }
+        
+        
+        
+        /* SPACING ADDED (NO DESIGN CHANGES) */
+        #agenda-section {
+            margin-top: 100px !important;
+            margin-bottom: 100px !important;
+        }
+        #sponsors-section {
+            margin-top: 100px !important;
+            margin-bottom: 100px !important;
+        }
+
+        .header-logo {
+    margin-bottom: 2.5rem;
+        }
+
+        header-logo img {
+    height: 500px; /* Maintain aspect ratio */
+    width: 500px; /* Adjust this value to your preferred size */
+    max-width: 100%; /* Ensure responsive */
+}
+
+
+.CWH-logo img {
+    height: 80px; /* Maintain aspect ratio */
+    width: 130px; /* Adjust this value to your preferred size */
+    max-width: 100%; /* Ensure responsive */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- RED NAVBAR -->
+    <nav class="fixed w-full z-50 bg-[#B60027]">
+      <div class="container mx-auto px-4 py-3">
+          <div class="flex justify-between items-center">
+              
+              <!-- Logo (respects .CWH-logo img CSS) -->
+              <div class="CWH-logo flex-shrink-0">
+                  <img src="CWH.png" alt="CWH Logo">
+              </div> 
+  
+              <!-- Hamburger for Mobile -->
+              <button class="md:hidden text-2xl text-white mobile-menu-btn">
+                  <i class="bi bi-list"></i>
+              </button>
+  
+              <!-- Desktop Navigation Links (no font override) -->
+              <div class="hidden md:flex space-x-6">
+                  <a href="speakers.html" class="nav-link text-white">Speakers</a>
+                  <a class="nav-link text-white">Mentors & Judges</a>
+                  <!-- <a href="#agenda-section" class="nav-link text-white hover:text-gray-300">Agenda</a> -->
+                  <a class="nav-link text-white">Prize</a>
+                  <!-- <a href="#sponsors-section" class="nav-link text-white hover:text-gray-300">Sponsors</a> -->
+                  <!-- <a href="contact.html" class="nav-link text-white hover:text-gray-300">Contact</a> -->
+              </div>
+          </div>
+  
+          <!-- Mobile Menu -->
+          <div class="mobile-menu md:hidden">
+              <a href="speakers.html" class="block py-3 px-4 border-b border-red-800 text-white">Speakers</a>
+              <a href="#" class="block py-3 px-4 border-b border-red-800 text-white">Mentors & Judges</a>
+              <a href="#" class="block py-3 px-4 border-b border-red-800 text-white">Prize</a>
+              <!-- <a href="#agenda-section" class="block py-3 px-4 border-b border-red-800 text-white">Agenda</a> -->
+              <!-- <a href="#sponsors-section" class="block py-3 px-4 border-b border-red-800 text-white">Sponsors</a> -->
+              <!-- <a href="contact.html" class="block py-3 px-4 text-white">Contact</a> -->
+          </div>
+      </div>
+  </nav>
+  
+  
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col items-center text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold space-font mb-6">
+              HackPrix <br> <span class="text-white">Season 2</span>
+            </h1>
+      
+            <section id="hero-btn">
+              <div class="flex flex-col md:flex-row gap-3 mb-4 justify-center">
+                <a href="https://discord.gg/Qh2MJj3AwB" target="_blank">
+                  <button class="bg-white text-red-600 font-bold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
+                    Join Discord Channel
+                  </button>
+                </a>
+              
+                <a href="https://hackprix-2025.devfolio.co/" target="_blank">
+                  <button class="bg-white text-red-600 font-bold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
+                    Register with Devfolio
+                  </button>
+                </a>
+              </div>
+              
+              
+      
+              <h3 class="mt-4 text-2xl font-semibold">
+                📍 Venue - <span class="text-white">Lords Institute of Engineering and Technology</span>
+              </h3>
+              <h3 class="mt-2 text-lg font-semibold">
+                📅 Date - <span class="text-white">14-15th June 2025</span>
+              </h3>
+            </section>
+          </div>
+        </div>
+      </section>
+      
+      <section id="description" class=" hover:[&_p]:opacity-100 transition-opacity duration-300 max-w-4xl mx-auto px-6 py-20">
+        <div class="text-center">
+          <h2 class="text-5xl font-bold text-white mb-12 tracking-tight">What is HackPrix</h2>
+          
+          <div class="space-y-8 text-white/90">
+            <p class="text-xl leading-relaxed">
+              HackPrix is a premier hackathon in Hyderabad, India, organized by CodeWave Hub to foster innovation and collaboration. This exclusive event brings together top students, developers, and tech visionaries to create cutting-edge solutions for real-world challenges.
+            </p>
+            
+            <p class="text-xl leading-relaxed">
+              Designed to push creative boundaries, HackPrix provides a platform for skill development through intense, solution-oriented teamwork. Participants conceptualize and build impactful projects, culminating in high-stakes pitches to industry leaders and potential investors.
+            </p>
+            
+            <p class="text-xl leading-relaxed font-medium">
+              Whether you're an experienced hacker or embarking on your first tech challenge, HackPrix offers unparalleled opportunities for growth, networking, and technological advancement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+       <!-- ===== SPONSORS SECTION ===== -->
+   <section id="sponsors-section" class="text-center pb-[100px]"> 
+    <div class="container mx-auto px-4">
+        <h1 class="text-5xl font-bold space-font mb-6">Sponsors</h1>
+        <div class="text-center">
+          <p class="text-4xl text-white/80">Presented By</p>
+          <img src="CWH Sp.png" alt="CodeWave Hub Logo" class="mx-auto h-[250px] w-auto object-contain">
+
+      </div>
+      
+        <div class="grid md:grid-cols-3 pt-20 gap-8">
+            <!-- Sponsor 1 (Keep as-is) -->
+            <div class="text-center">
+                <p class="text-4xl text-white/80">Title Partner</p>
+                <img src="LIET.png" alt="Sponsor 1" class="w-40 mx-auto">
+            </div>
+
+            <!-- Sponsor 2 (Enlarged) -->
+            <div class="text-center">
+              <p class="text-4xl text-white/80">Silver Partner</p>
+                <img src="ETHindia.png" alt="Sponsor 2" class="w-52 mx-auto"> <!-- w-52 = larger than w-40 -->
+            </div>
+
+            <!-- Sponsor 3 (Enlarged) -->
+            <div class="text-center">
+              <p class="text-4xl text-white/80">Platform Partner</p>
+                <img src="Devfolio.png" alt="Sponsor 3" class="w-52 mx-auto"> <!-- w-52 = larger than w-40 -->
+            </div>
+        </div>
+    </div>
+</section>
+      
+                
+                
+       
+      <section id="faq" class="py-20 bg-#d4003b text-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 space-grotesk">Frequently Asked Questions</h2>
+          <div class="max-w-3xl mx-auto space-y-4" id="faqContainer">
+            <div class="faq-item border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg">
+                <span>Who can participate?</span>
+                <span class="arrow transition-transform duration-300">&#9660;</span>
+              </button>
+              <div class="faq-answer mt-2 text-gray-300 hidden">
+                Any college student with a valid ID card can participate in HackPrix 2025.
+              </div>
+            </div>
+      
+            <div class="faq-item border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg">
+                <span>What’s the team size?</span>
+                <span class="arrow transition-transform duration-300">&#9660;</span>
+              </button>
+              <div class="faq-answer mt-2 text-gray-300 hidden">
+                Teams can have 2–4 members. Solo participation is also allowed.
+              </div>
+            </div>
+      
+            <div class="faq-item border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg">
+                <span>If your question isn’t listed, what’s your move?</span>
+                <span class="arrow transition-transform duration-300">&#9660;</span>
+              </button>
+              <div class="faq-answer mt-2 text-gray-300 hidden">
+                For assistance, reach out to us at Discord or email us at HackPrix@lords.ac.in
+              </div>
+            </div>
+      
+            <div class="faq-item border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg">
+                <span>Will food & stay be provided?</span>
+                <span class="arrow transition-transform duration-300">&#9660;</span>
+              </button>
+              <div class="faq-answer mt-2 text-gray-300 hidden">
+                We've got lots of food and snacks for everyone, stay hacky and hydrated. Rooms for resting/sleeping will be arranged at the Campus (separately for opposite genders).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+<!-- ===== WHITE FOOTER ===== -->
+<footer class="bg-white text-gray-800 py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-xl font-bold mb-4 text-black">CodeWave Hub</h3>
+                <p class="mb-4">Organizing India's most exciting hackathon since 2024.</p>
+                <div class="flex space-x-4">
+                   
+                    <a href="https://x.com/codewavehub" class="text-black hover:text-red-800"><i class="bi bi-twitter-x text-2xl"></i></a>
+                    <a href="https://www.instagram.com/hackprix/" class="text-black hover:text-red-800"><i class="bi bi-instagram text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/company/hackprix-hackathon/" class="text-black hover:text-red-800"><i class="bi bi-linkedin text-2xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="">
+                
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-black-600">Contact</h3>
+    <ul class="space-y-2">
+        <li>
+            <a href="https://discord.gg/kWLrH7vT" 
+               target="_blank"
+               class="flex items-center hover:text-red-600 transition-colors">
+                <i class="bi bi-discord mr-2 text-black"></i>
+                <span>Join our Discord</span>
+            </a>
+                    <li class="flex items-start">
+                        <i class="bi bi-envelope-fill mr-2 text-black"></i>
+                        <span>HackPrix@lords.ac.in</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200 mt-8 pt-8 text-center">
+            <p>Made with Love ❤❤</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // MOBILE MENU TOGGLE
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('mobile-menu-open');
+        });
+
+        // SLIDESHOW
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        setInterval(nextSlide, 5000);
+    });
+    
+  const questions = document.querySelectorAll('.faq-question');
+  questions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+    });
+  });
+
+
+
+    
+</script>
+</body>
+</html>
