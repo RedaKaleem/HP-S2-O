@@ -7,16 +7,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #d4003b, #0d0d0d);
             color: white;
         }
-
         .space-font {
             font-family: 'Space Grotesk', sans-serif;
+        }
+        .speaker-card {
+            transition: all 0.3s ease;
+            border-top: 4px solid #d4003b;
+            background: white;
+        }
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .time-badge {
+            font-family: 'Space Grotesk', monospace;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -24,37 +35,86 @@
 
     <section id="Pre-hackthon" class="flex-grow py-16 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl font-bold space-font mb-12">Pre-Hackathon Sessions</h1>
-            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <h1 class="text-4xl sm:text-5xl font-bold space-font mb-16 relative">
+                Pre-Hackathon Sessions
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-white to-transparent"></span>
+            </h1>
+            
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 
                 <!-- Speaker 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
-                    <img src="speaker1.jpg" alt="Speaker 1" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h2 class="text-xl font-semibold">Bhawna Chauhan</h2>
-                    <p class="text-blue-500">Introduction To Firebase</p>
-                    <a href="https://www.linkedin.com/in/johndoe" target="_blank" class="text-blue-600 mt-2 inline-block">
-                        <i class="bi bi-linkedin text-2xl"></i>
-                    </a>
+                <div class="speaker-card p-6 rounded-lg shadow-lg text-gray-900 flex flex-col">
+                    <div class="mb-6 overflow-hidden rounded-lg shadow-md">
+                        <img src="speaker 1.jpeg" alt="Bhawna Chauhan" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <h2 class="text-2xl font-bold mb-1">Bhawna Chauhan</h2>
+                        <p class="text-blue-600 font-medium mb-4">Introduction To Firebase</p>
+                        <div class="mt-auto">
+                            <div class="bg-gray-100 p-3 rounded-lg mb-4 time-badge">
+                                <p class="text-gray-700 text-sm font-semibold">
+                                    <i class="bi bi-calendar-event mr-2"></i>MAR 23
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-clock mr-2"></i>16:00 - 17:00 IST
+                                </p>
+                            </div>
+                            <div class="flex justify-center">
+                                <a href="https://x.com/johndoe" target="_blank" class="text-gray-800 hover:text-black transition-colors">
+                                    <i class="bi bi-twitter-x text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Speaker 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
-                    <img src="speaker2.jpg" alt="Speaker 2" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h2 class="text-xl font-semibold">Reda Kaleem</h2>
-                    <p class="text-blue-500">Introduction to Web Dev</p>
-                    <a href="https://www.linkedin.com/in/janesmith" target="_blank" class="text-blue-600 mt-2 inline-block">
-                        <i class="bi bi-linkedin text-2xl"></i>
-                    </a>
+                <div class="speaker-card p-6 rounded-lg shadow-lg text-gray-900 flex flex-col">
+                    <div class="mb-6 overflow-hidden rounded-lg shadow-md">
+                        <img src="speaker2.jpg" alt="Reda Kaleem" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <h2 class="text-2xl font-bold mb-1">Reda Kaleem</h2>
+                        <p class="text-blue-600 font-medium mb-4">API, AI and Agents</p>
+                        <div class="mt-auto">
+                            <div class="bg-gray-100 p-3 rounded-lg mb-4 time-badge">
+                                <p class="text-gray-700 text-sm font-semibold">
+                                    <i class="bi bi-calendar-event mr-2"></i>APR 29
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-clock mr-2"></i>10:00 - 13:30 IST
+                                </p>
+                            </div>
+                            <div class="flex justify-center">
+                                <a href="https://x.com/janesmith" target="_blank" class="text-gray-800 hover:text-black transition-colors">
+                                    <i class="bi bi-twitter-x text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Speaker 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
-                    <img src="speaker3.jpg" alt="Speaker 3" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h2 class="text-xl font-semibold">Afnan Abdul Vasay</h2>
-                    <p class="text-blue-500">GitHub Essentials</p>
-                    <a href="https://www.linkedin.com/in/davidlee" target="_blank" class="text-blue-600 mt-2 inline-block">
-                        <i class="bi bi-linkedin text-2xl"></i>
-                    </a>
+                <div class="speaker-card p-6 rounded-lg shadow-lg text-gray-900 flex flex-col">
+                    <div class="mb-6 overflow-hidden rounded-lg shadow-md">
+                        <img src="speaker3.jpg" alt="Afnan Abdul Vasay" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <h2 class="text-2xl font-bold mb-1">Afnan Abdul Vasay</h2>
+                        <p class="text-blue-600 font-medium mb-4">Building in Public With Copilot</p>
+                        <div class="mt-auto">
+                            <div class="bg-gray-100 p-3 rounded-lg mb-4 time-badge">
+                                <p class="text-gray-700 text-sm font-semibold">
+                                    <i class="bi bi-calendar-event mr-2"></i>APR 29
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-clock mr-2"></i>10:00 - 13:30 IST
+                                </p>
+                            </div>
+                            <div class="flex justify-center">
+                                <a href="https://x.com/davidlee" target="_blank" class="text-gray-800 hover:text-black transition-colors">
+                                    <i class="bi bi-twitter-x text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -64,4 +124,3 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-
