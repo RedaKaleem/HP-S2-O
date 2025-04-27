@@ -95,49 +95,80 @@
     max-width: 100%; /* Ensure responsive */
 }
 
+/* Navbar Styles */
+nav {
+  background: linear-gradient(135deg, #d4003b, #0d0d0d);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Body padding to account for fixed navbar */
+body {
+  padding-top: 5.5rem; /* Adjusted for larger logo */
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+  transition: all 0.3s ease-out;
+}
+
 
 
     </style>
 </head>
 <body>
-    <!-- RED NAVBAR -->
-    <nav class="fixed w-full z-50 bg-[#B60027]">
-      <div class="container mx-auto px-4 py-3">
-          <div class="flex justify-between items-center">
-              
-              <!-- Logo (respects .CWH-logo img CSS) -->
-              <div class="CWH-logo flex-shrink-0">
-                  <img src="CWH.png" alt="CWH Logo">
-              </div> 
-  
-              <!-- Hamburger for Mobile -->
-              <button class="md:hidden text-2xl text-white mobile-menu-btn">
-                  <i class="bi bi-list"></i>
-              </button>
-  
-              <!-- Desktop Navigation Links (no font override) -->
-              <div class="hidden md:flex space-x-6">
-                  <a href="speakers.html" class="nav-link text-white">Speakers</a>
-                  <a class="nav-link text-white">Mentors & Judges</a>
-                  <!-- <a href="#agenda-section" class="nav-link text-white hover:text-gray-300">Agenda</a> -->
-                  <a class="nav-link text-white">Prize</a>
-                  <!-- <a href="#sponsors-section" class="nav-link text-white hover:text-gray-300">Sponsors</a> -->
-                  <!-- <a href="contact.html" class="nav-link text-white hover:text-gray-300">Contact</a> -->
-              </div>
-          </div>
-  
-          <!-- Mobile Menu -->
-          <div class="mobile-menu md:hidden">
-              <a href="speakers.html" class="block py-3 px-4 border-b border-red-800 text-white">Speakers</a>
-              <a href="#" class="block py-3 px-4 border-b border-red-800 text-white">Mentors & Judges</a>
-              <a href="#" class="block py-3 px-4 border-b border-red-800 text-white">Prize</a>
-              <!-- <a href="#agenda-section" class="block py-3 px-4 border-b border-red-800 text-white">Agenda</a> -->
-              <!-- <a href="#sponsors-section" class="block py-3 px-4 border-b border-red-800 text-white">Sponsors</a> -->
-              <!-- <a href="contact.html" class="block py-3 px-4 text-white">Contact</a> -->
-          </div>
+ <!-- For BOTH pages (replace existing navbars with this) -->
+<!-- Updated Navbar -->
+<nav class="fixed w-full z-50 top-0"> <!-- Added top-0 to ensure no gap -->
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Larger Logo -->
+      <div class="flex items-center">
+        <img src="CWH.png" alt="Logo" class="h-16"> <!-- Increased from h-12 to h-16 -->
       </div>
-  </nav>
-  
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="speakers.html" class="nav-link text-white text-lg font-medium hover:text-red-200 transition duration-300 relative group">
+          Speakers
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="nav-link text-white text-lg font-medium hover:text-red-200 transition duration-300 relative group">
+          Mentors & Judges
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="nav-link text-white text-lg font-medium hover:text-red-200 transition duration-300 relative group">
+          Prize
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-4 space-y-1">
+        <a href="speakers.html" class="block px-3 py-2 text-white text-lg font-medium hover:bg-red-800 rounded-md">Speakers</a>
+        <a href="#" class="block px-3 py-2 text-white text-lg font-medium hover:bg-red-800 rounded-md">Mentors & Judges</a>
+        <a href="#" class="block px-3 py-2 text-white text-lg font-medium hover:bg-red-800 rounded-md">Prize</a>
+      </div>
+    </div>
+  </div>
+</nav>
   
 
     <section id="home" class="min-h-screen flex items-center justify-center pt-20">
@@ -283,7 +314,7 @@
                 <!-- Sponsor 2 -->
                 <div class="text-center">
                     <p class="text-4xl text-white/80">Silver Partner</p> <br>
-                    <img src="ETHindia1.png" alt="Sponsor 2" class="w-72 mx-auto"> <!-- Increased from w-52 -->
+                    <img src="orkes.png" alt="Sponsor 2" class="w-72 mx-auto"> <!-- Increased from w-52 -->
                 </div>
     
                 <!-- Sponsor 3 -->
@@ -381,7 +412,7 @@
             </a>
                    <li class="flex items-start">
     <i class="bi bi-envelope-fill mr-2 text-black"></i>
-    <a href="mailto:hackprix@lords.ac.in" class="text-black hover:underline">hackprix@lords.ac.in</a>
+    <a href="mailto:hackprix@lords.ac.in" class="text-black hover:text-red-600 transition-colors">hackprix@lords.ac.in</a>
 </li>
 
                 </ul>
@@ -427,6 +458,11 @@
     });
   });
 
+ 
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+});
 
 
     
